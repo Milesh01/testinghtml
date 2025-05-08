@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - My Website</title>
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
+ 
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header px-md-4 d-flex justify-content-center align-items-center">
+      <div class="container-fluid border-bottom border-secondary shadow-sm py-3 px-md-5 bg-teal">
+          <div class="d-flex justify-content-between align-items-center">
+             <div class="d-flex gap-5">
+              <a href="#" class="logo text-decoration-none fs-4 fw-bold text-white">Techtro</a>
+              
+              <!-- Desktop Navigation -->
+              <nav class="menu-bar d-none d-lg-flex align-items-center gap-4">
+                  <a href="#" class="text-decoration-none">Home</a>
+                  <a href="#" class="text-decoration-none">About</a>
+                  <a href="/pages/faq.html" class="text-decoration-none">Faq</a>
+                  <a href="/components/review.html" class="text-decoration-none">Review</a>
+                  <a href="#" class="text-decoration-none">Contact</a>
+              </nav>
+             </div>
+             <a href="#" class="btn d-none d-lg-block btn-outline-secondary px-4 py-2 rounded-pill custom-hover">Get Started</a>
+
+              <!-- Mobile Toggle Button -->
+              <button class="menu-toggle d-lg-none p-0 border-0 bg-transparent" id="menuToggle">
+                  <i class="fas fa-bars fs-3"></i>
+              </button>
+          </div>
+      </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu bg-white shadow vh-100 p-4" id="mobileMenu">
+      <div class="d-flex justify-content-between mb-4">
+          <a href="#" class="logo text-decoration-none fs-4 fw-bold text-dark">Techtro</a>
+          <button class="btn p-0 border-0 bg-transparent close-menu">
+              <i class="fas fa-times fs-3"></i>
+          </button>
+      </div>
+      
+      <div class="d-flex flex-column h-100">
+          <nav class="mb-4">
+              <a href="#" class="d-block py-2 text-decoration-none text-dark">Home</a>
+              <a href="#" class="d-block py-2 text-decoration-none text-dark">About</a>
+              <a href="#" class="d-block py-2 text-decoration-none text-dark">Pages</a>
+              <a href="#" class="d-block py-2 text-decoration-none text-dark">Portfolio</a>
+              <a href="#" class="d-block py-2 text-decoration-none text-dark mb-5">Contact</a>
+              <a href="#" class="py-3 px-4 border-secondary border w-100 mt-5 rounded-pill text-decoration-none text-dark">Get Started</a>
+          </nav>
+          
+          <div class="mt-auto pt-4 border-top">
+              <h5 class="mb-3">Contact Info</h5>
+              <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Main Street, Melbourne, Australia</p>
+              <p class="mb-2"><i class="fas fa-envelope me-2"></i> Info@Example.Com</p>
+              <p class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Friday, 09am –05pm</p>
+              <p class="mb-3"><i class="fas fa-phone me-2"></i> +11002345909</p>
+              
+              <div class="d-flex gap-3">
+                  <a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <div id="hero"></div>
+  <div id="state-counter"></div>
+  <div id="operation"></div>
+  <!-- <div id="faq"></div> -->
+  <!-- <div id="pricing-plans"></div> -->
+
+  <section class="pricing-section px-lg-4 d-flex justify-content-center align-items-center">
+    <div class="container-fluid py-3 px-lg-5 px-4">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fa fa-minus" aria-hidden="true"></i> PLANS AND PRICING <i class="fa fa-minus" aria-hidden="true"></i></h2>
+            <h3 class="section-subtitle">Transparent pricing for all</h3>
+            <p class="section-description">
+                Every business is unique, find the perfect plan for you.
+            </p>
+            
+            <div class="toggle-container">
+                <div class="toggle-switch">
+                    <div class="toggle-option active" data-period="monthly">Monthly</div>
+                    <div class="toggle-option" data-period="annually">Annually</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Personal Plan -->
+            <div class="col-lg-4 col-md-6">
+                <div class="pricing-card pricing-card-yellow">
+                    <div class="pricing-header">
+                        <div class="pricing-shape">
+                            <img decoding="async" src="https://techtro-wp.qzency.com/wp-content/plugins/techtro-core/inc/elementor/images/pricing-shape.png" alt="img">
+                        </div>
+                        <h3 class="plan-name">Personal</h3>
+                        <div class="plan-price">
+                            <span class="price-amount">564</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-list">
+                        <h6 class="mb-4"><strong>Key features:</strong></h6>
+                        <ul class="feature-list mt-2">
+                            <li><i class="fas fa-check text-primary me-2"></i> Live chat widget for website</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> All basic CRM features</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Up to 8,000 contacts</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Additional staff accounts</li>
+                            <li><i class="fas fa-times text-danger me-2"></i> Avalara tax automation</li>
+                            <li><i class="fas fa-times text-danger me-2"></i> Organizational admin</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> 24/7 email and chat support</li>
+                        </ul>
+                        <button class="btn-plan">Get started</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Growth Plan -->
+            <div class="col-lg-4 col-md-6">
+                <div class="pricing-card pricing-card-gray">
+                    <div class="pricing-header">
+                        <div class="pricing-shape">
+                            <img decoding="async" src="https://techtro-wp.qzency.com/wp-content/plugins/techtro-core/inc/elementor/images/pricing-shape.png" alt="img">
+                        </div>
+                        <h3 class="plan-name">Growth</h3>
+                        <div class="plan-price">
+                            <span class="price-amount">1064</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-list">
+                        <h6 class="mb-4"><strong>Key features:</strong></h6>
+                        <ul class="feature-list mt-2">
+                            <li><i class="fas fa-check text-primary me-2"></i> Live chat widget for website</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> All basic CRM features</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Up to 8,000 contacts</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Additional staff accounts</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> 24/7 email and chat support</li>
+                            <li><i class="fas fa-times text-danger me-2"></i> Organizational admin</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Custom reports and analytics</li>
+                        </ul>
+                        <button class="btn-plan">Get started</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Plan -->
+            <div class="col-lg-4 col-md-6">
+                <div class="pricing-card pricing-card-dark">
+                    <div class="pricing-header">
+                        <div class="pricing-shape">
+                            <img decoding="async" src="https://techtro-wp.qzency.com/wp-content/plugins/techtro-core/inc/elementor/images/pricing-shape.png" alt="img">
+                        </div>
+                        <h3 class="plan-name">Professional</h3>
+    
+                        <div class="plan-price">
+                            <span class="price-amount">2064</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-list">
+                        <h6 class="mb-4"><strong>Key features:</strong></h6>
+                        <ul class="feature-list mt-2">
+                            <li><i class="fas fa-check text-primary me-2"></i> Live chat widget for website</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> All basic CRM features</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Up to 8,000 contacts</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Additional staff accounts</li>
+                            <li><i class="fas fa-times text-danger me-2"></i> Avalara tax automation</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Organizational admin</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> 24/7 email and chat support</li>
+                        </ul>
+                        <button class="btn-plan">Get started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="faq-section px-lg-4">
+    <div class="container-fluid py-3 px-lg-5 px-4">
+  <div class="faq-header">
+    <h3 class="section-title"><i class="fa fa-minus" aria-hidden="true"></i> FAQ <i class="fa fa-minus" aria-hidden="true"></i></h2>
+    <h2>Frequently Asked Questions</h2>
+    <p class="text-muted">Find answers to common queries below.</p>
+  </div>
+<div class="row">
+    <div class="col-lg-4 col-md-5 overflow-hidden" style="height: 400px;">
+            <img src="https://img.freepik.com/premium-vector/faqs-concept-illustration_86047-992.jpg?w=826" class="object-fit-cover h-100 w-100">
+    </div>
+    <div class="col-lg-8 col-md-7 col-12">
+        
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          What is your return policy?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We offer a 30-day return policy on all items. Just make sure the product is in original condition.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item mt-3">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          How can I track my order?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Once your order ships, we’ll email you a tracking number and a link to track your shipment.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item mt-3">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+          Do you offer international shipping?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, we ship to over 50 countries worldwide. Shipping fees vary by location.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item mt-3">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+           CRM software, and how can it benefit my business?		
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, we ship to over 50 countries worldwide. Shipping fees vary by location.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mt-3">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+            Do you offer international shipping?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, we ship to over 50 countries worldwide. Shipping fees vary by location.
+          </div>
+        </div>
+      </div>
+
+  </div>
+    </div>
+</div>
+</div></div>
+
+    <!-- Testimonials Section -->
+  
+
+  <!-- Footer -->
+    <footer id="footer"></footer>
+    <script src="js/script.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  
+</body>
+</html>
