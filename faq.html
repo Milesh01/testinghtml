@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ Page</title>
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
+
+</head>
+<body>
+<div id="header"></div>
+
+<section class="hero-section px-md-4 d-flex justify-content-md-center align-items-md-center">
+  <div class="container-fluid bg-teal pb-5  px-md-5 px-4 rounded-bottom-5" style="padding-top: 60px;">
+    <div class="row align-items-lg-center text-white">
+      <div class="col-12 d-flex align-items-center justify-content-center flex-column text-center">
+        <div class="text-center">
+          <span class="display-6 fw-semibold mb-2">
+            Frequently Asked Questions
+          </span>
+        </div>
+        <nav aria-label="breadcrumb" class="mt-3">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="/" class="text-decoration-none">
+                <i class="fas fa-home me-1"></i> Home
+              </a>
+            </li>
+            <li class="breadcrumb-item text-gray" aria-current="page">
+              <i class="fas fa-angle-right me-1"></i> Faq
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="faq-section">
+    <div class="container py-3">
+  <div class="faq-header">
+    <h3 class="section-title"><i class="fa fa-minus" aria-hidden="true"></i> FAQ <i class="fa fa-minus" aria-hidden="true"></i></h2>
+    <h2>Frequently Asked Questions</h2>
+    <p class="text-muted">Find answers to common queries below.</p>
+  </div>
+<div class="row">
+    <div class="col-lg-4 col-md-5" >
+      <div class="sticky-box">
+            <img src="https://img.freepik.com/premium-vector/faqs-concept-illustration_86047-992.jpg?w=826" class="object-fit-cover h-100 w-100">
+    </div>
+    </div>
+    <div class="col-lg-8 col-md-7 col-12">
+        
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          What is the Administrative Module? 
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          The administrative module is designed for a hospital owner or the person accountable for operating the entire hospital smoothly. Using this module, you can manage the entire system easily and efficiently.
+          It includes every important feature like doctors portal, patient portal, appointment scheduling, prescription management, human resource management, bed management, employee management, accounts, software settings, and role assigning.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item mt-3">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          What is the Doctor Module?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          The Doctor Module is included because a doctor is the most important person to ensure the health condition of any patient. Using this module, doctors can access all important functions that belong to them. This allows them to maintain patient portals, appointment scheduling & maintaining, prescription making, and any other things that are related to hospital activities.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item mt-3">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+          What is the Accountants Module? 
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+        The software with this module helps to provide a complete clinic management system that is understandable to both technical or non-technical people.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item mt-3">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+         How long do I get support?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+          If you have an active software license, then you will have access to software support. The source also mentions this is totally open-source software.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mt-3">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+           Is the software customizable? 
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, this software is 100% customizable. The provider is prepared to customize it based on your specific business requirements. They also highlight "Customization Facilities".
+          </div>
+        </div>
+      </div>
+
+  </div>
+    </div>
+</div>
+</div></div>
+
+<div id="footer"></div>
+
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    fetch("/components/header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("/components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+</body>
+</html>

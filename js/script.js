@@ -18,16 +18,39 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("footer").innerHTML = data;
       });
 
-      fetch("components/operation.html")
+      fetch("components/features.html")
       .then(res => res.text())
       .then(data => {
-        document.getElementById("operation").innerHTML = data;
+        document.getElementById("features").innerHTML = data;
       });
 
       fetch("pages/faq.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("faq").innerHTML = data;
+      });
+      
+      fetch("pages/faq.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("faq").innerHTML = data;
+      });
+
+       fetch("pages/contact-us.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("contact-us").innerHTML = data;
+      });
+
+       fetch("pages/review.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("review").innerHTML = data;
+      });
+         fetch("components/mission.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("mission").innerHTML = data;
       });
   });
   
@@ -38,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const mobileMenu = document.getElementById('mobileMenu');
       const overlay = document.getElementById('overlay');
       let lastScrollY = window.scrollY;
-      const threshold = 200; // When to start the effect
+      const threshold = 50; // When to start the effect
       let isFixed = false;
       let isSticky = false;
 
@@ -131,3 +154,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+
+// ======Testimonials==========
+  document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            
+            // Initialize animation on load
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+        });

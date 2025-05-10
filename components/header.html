@@ -8,8 +8,8 @@
      <link rel="stylesheet" href="/css/style.css">
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+    <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
+    <!-- <style>
         /* Custom styles that Bootstrap doesn't cover */
         body {
             height: 2000px; /* For demo scrolling */
@@ -75,90 +75,76 @@
         .hero {
             height: 120vh;
         }
-    </style>
+    </style> -->
 </head>
 <body>
     <!-- Header -->
-    <header class="header px-md-5 d-flex justify-content-center align-items-center">
-        <div class="container-fluid border-bottom shadow-sm py-3 px-md-5 bg-teal">
-            <div class="d-flex justify-content-between align-items-center">
-               <div class="d-flex gap-5">
-                <a href="#" class="logo text-decoration-none fs-4 fw-bold text-white">Techtro</a>
-                
-                <!-- Desktop Navigation -->
-                <nav class="d-none d-lg-flex align-items-center gap-4">
-                    <a href="#" class="text-decoration-none">Home</a>
-                    <a href="#" class="text-decoration-none">About</a>
-                    <a href="#" class="text-decoration-none">Pages</a>
-                    <a href="/components/review.html" class="text-decoration-none">Review</a>
-                    <a href="#" class="text-decoration-none">Contact</a>
-                </nav>
-               </div>
-               <a href="#" class="btn btn-outline-secondary px-4 py-2 rounded-pill custom-hover">Get Started</a>
+     <header class="header px-md-4 d-flex justify-content-center align-items-center">
+      <div class="container-fluid border-bottom border-secondary shadow-sm py-3 px-md-5 bg-teal">
+          <div class="d-flex justify-content-between align-items-center">
+             <div class="d-flex gap-5">
+              <a href="#" class="logo text-decoration-none fs-4 fw-bold text-white">Techtro</a>
+              
+              <!-- Desktop Navigation -->
+              <nav class="menu-bar d-none d-lg-flex align-items-center gap-4">
+                  <a href="/" class="text-decoration-none">Home</a>
+                  <a href="about.html" class="text-decoration-none">About</a>
+                  <a href="faq.html" class="text-decoration-none">Faq</a>
+                  <a href="review.html" class="text-decoration-none">Review</a>
+                  <a href="contact-us.html" class="text-decoration-none">Contact</a>
+              </nav>
+             </div>
+             <a href="#" class="btn d-none d-lg-block btn-outline-secondary px-4 py-2 rounded-pill custom-hover">Get Started</a>
 
-                <!-- Mobile Toggle Button -->
-                <button class="menu-toggle btn d-lg-none p-0 border-0 bg-transparent" id="menuToggle">
-                    <i class="fas fa-bars fs-3"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+              <!-- Mobile Toggle Button -->
+              <button class="menu-toggle d-lg-none p-0 border-0 bg-transparent" id="menuToggle">
+                  <i class="fas fa-bars fs-3"></i>
+              </button>
+          </div>
+      </div>
+  </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu bg-white shadow vh-100 p-4" id="mobileMenu">
-        <div class="d-flex justify-content-between mb-4">
-            <a href="#" class="logo text-decoration-none fs-4 fw-bold text-dark">Techtro</a>
-            <button class="btn p-0 border-0 bg-transparent close-menu">
-                <i class="fas fa-times fs-3"></i>
-            </button>
-        </div>
-        
-        <div class="d-flex flex-column h-100">
-            <nav class="mb-4">
-                <a href="#" class="d-block py-2 text-decoration-none text-dark">Home</a>
-                <a href="#" class="d-block py-2 text-decoration-none text-dark">About</a>
-                <a href="#" class="d-block py-2 text-decoration-none text-dark">Pages</a>
-                <a href="#" class="d-block py-2 text-decoration-none text-dark">Portfolio</a>
-                <a href="#" class="d-block py-2 text-decoration-none text-dark">Contact</a>
-                <a href="#" class="btn btn-primary w-100 mt-3">Get Started</a>
-            </nav>
-            
-            <div class="mt-auto pt-4 border-top">
-                <h5 class="mb-3">Contact Info</h5>
-                <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Main Street, Melbourne, Australia</p>
-                <p class="mb-2"><i class="fas fa-envelope me-2"></i> Info@Example.Com</p>
-                <p class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Friday, 09am –05pm</p>
-                <p class="mb-3"><i class="fas fa-phone me-2"></i> +11002345909</p>
-                
-                <div class="d-flex gap-3">
-                    <a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+   <!-- Mobile Menu -->
+  <div class="mobile-menu bg-white shadow vh-100 p-4" id="mobileMenu">
+      <div class="d-flex justify-content-between mb-4">
+          <a href="#" class="logo text-decoration-none fs-4 fw-bold text-dark">Techtro</a>
+          <button class="btn p-0 border-0 bg-transparent close-menu">
+              <i class="fas fa-times fs-3"></i>
+          </button>
+      </div>
+      
+      <div class="d-flex flex-column h-100">
+          <nav class="mb-4">
+              <a href="/" class="d-block py-2 text-decoration-none text-dark">Home</a>
+              <a href="about.html" class="d-block py-2 text-decoration-none text-dark">About</a>
+              <a href="faq.html" class="d-block py-2 text-decoration-none text-dark">Faq</a>
+              <a href="review.html" class="d-block py-2 text-decoration-none text-dark">Testimonials</a>
+              <a href="contact-us.html" class="d-block py-2 text-decoration-none text-dark mb-5">Contact</a>
+          </nav>
+          
+          <div class="mt-auto pt-4 border-top">
+              <h5 class="mb-3">Contact Info</h5>
+              <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> I, 102, Block N, Kirti Nagar, New Delhi, Delhi, 110015</p>
+              <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@7d7s.com</p>
+              <p class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Friday, 09am –05pm</p>
+              <p class="mb-3"><i class="fas fa-phone me-2"></i> +91 8800007740</p>
+              
+              <div class="d-flex gap-3">
+                  <a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
 
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
-
-    <!-- Content -->
-    <div class="content">
-        <section class="hero d-flex justify-content-center align-items-center bg-light">
-            <div class="text-center">
-                <h1 class="display-4 mb-3">Welcome to Techtro</h1>
-                <p class="text-muted">Scroll down to see the header effect</p>
-            </div>
-        </section>
-        
-        <div class="container py-5">
-            <p>Continue scrolling...</p>
-        </div>
-    </div>
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+  </div>
 
     <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {

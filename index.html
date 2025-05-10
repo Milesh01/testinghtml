@@ -6,6 +6,7 @@
   <title>Home - My Website</title>
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/review.css" />
   <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
  
 </head>
@@ -21,10 +22,10 @@
               <!-- Desktop Navigation -->
               <nav class="menu-bar d-none d-lg-flex align-items-center gap-4">
                   <a href="#" class="text-decoration-none">Home</a>
-                  <a href="#" class="text-decoration-none">About</a>
-                  <a href="/pages/faq.html" class="text-decoration-none">Faq</a>
-                  <a href="/components/review.html" class="text-decoration-none">Review</a>
-                  <a href="#" class="text-decoration-none">Contact</a>
+                  <a href="about.html" class="text-decoration-none">About</a>
+                  <a href="faq.html" class="text-decoration-none">Faq</a>
+                  <a href="review.html" class="text-decoration-none">Review</a>
+                  <a href="contact-us.html" class="text-decoration-none">Contact</a>
               </nav>
              </div>
              <a href="#" class="btn d-none d-lg-block btn-outline-secondary px-4 py-2 rounded-pill custom-hover">Get Started</a>
@@ -48,12 +49,11 @@
       
       <div class="d-flex flex-column h-100">
           <nav class="mb-4">
-              <a href="#" class="d-block py-2 text-decoration-none text-dark">Home</a>
-              <a href="#" class="d-block py-2 text-decoration-none text-dark">About</a>
-              <a href="#" class="d-block py-2 text-decoration-none text-dark">Pages</a>
-              <a href="#" class="d-block py-2 text-decoration-none text-dark">Portfolio</a>
-              <a href="#" class="d-block py-2 text-decoration-none text-dark mb-5">Contact</a>
-              <a href="#" class="py-3 px-4 border-secondary border w-100 mt-5 rounded-pill text-decoration-none text-dark">Get Started</a>
+              <a href="/" class="d-block py-2 text-decoration-none text-dark">Home</a>
+              <a href="about.html" class="d-block py-2 text-decoration-none text-dark">About</a>
+              <a href="faq.html" class="d-block py-2 text-decoration-none text-dark">Faq</a>
+              <a href="review.html" class="d-block py-2 text-decoration-none text-dark">Review</a>
+              <a href="contact-us.html" class="d-block py-2 text-decoration-none text-dark mb-5">Contact</a>
           </nav>
           
           <div class="mt-auto pt-4 border-top">
@@ -79,10 +79,13 @@
 
   <!-- Hero Section -->
   <div id="hero"></div>
-  <div id="state-counter"></div>
-  <div id="operation"></div>
-  <!-- <div id="faq"></div> -->
+
+  <div id="features"></div>
+
   <!-- <div id="pricing-plans"></div> -->
+  <div id="state-counter"></div>
+    <!-- Mission Section -->
+    
 
   <section class="pricing-section px-lg-4 d-flex justify-content-center align-items-center">
     <div class="container-fluid py-3 px-lg-5 px-4">
@@ -193,18 +196,96 @@
     </div>
 </section>
 
+ <section class="testimonial-section px-lg-4 d-flex justify-content-center align-items-center">
+        <div class="container-fluid py-5  px-lg-5 px-4 position-relative bg-gray-3 rounded-5">
+     <div class="row">
+        <div class="col-md-6">
+          <div class="review-header">
+    <h3 class="section-title"><i class="fa fa-minus" aria-hidden="true"></i> USER EXPERIENCES  <i class="fa fa-minus" aria-hidden="true"></i></h2>
+    <h2 class="text-dark-green  mb-5">Real stories from satisfied customers</h2>
+    </div>
+  </div>
+  <div class="col-md-6 text-md-end">
+ <div class="view-all animate-in" style="animation-delay: 1.4s;">
+                <a href="review.html" class="view-all-btn">See all stories <i class="fas fa-arrow-right"></i></a>
+            </div>
+     </div></div>
+          
+            <div class="section-header animate-in" style="animation-delay: 0.2s;">
+                <h2 class="section-title"></h2>
+                <p class="section-subtitle"></p>
+            </div>
+            
+            <div class="testimonial-slider">                
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card animate-in" style="animation-delay: 0.6s;">
+                            <div class="user-info">
+                                <div class="user-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Michelle Rivera">
+                                </div>
+                                <div class="user-details">
+                                    <h4 class="user-name">Michelle Rivera</h4>
+                                    <p class="user-role">Marketing Director, TechCorp</p>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                The automation features save us hours every day. Our workflows are smoother, and client satisfaction has never been higher. The platform's intuitive design made onboarding our team a breeze.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card animate-in" style="animation-delay: 0.8s;">
+                            <div class="user-info">
+                                <div class="user-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ronald Richards">
+                                </div>
+                                <div class="user-details">
+                                    <h4 class="user-name">Ronald Richards</h4>
+                                    <p class="user-role">CEO, StartupHub</p>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                With everything in one dashboard, I always know what's happening. Planning tasks and managing the pipeline has never been easier. The analytics tools provide insights we never had before.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </section>
 
-
-<div class="faq-section px-lg-4">
-    <div class="container-fluid py-3 px-lg-5 px-4">
+  <div class="faq-section">
+    <div class="container py-3">
   <div class="faq-header">
     <h3 class="section-title"><i class="fa fa-minus" aria-hidden="true"></i> FAQ <i class="fa fa-minus" aria-hidden="true"></i></h2>
     <h2>Frequently Asked Questions</h2>
     <p class="text-muted">Find answers to common queries below.</p>
   </div>
 <div class="row">
-    <div class="col-lg-4 col-md-5 overflow-hidden" style="height: 400px;">
+    <div class="col-lg-4 col-md-5" >
+      <div class="sticky-box">
             <img src="https://img.freepik.com/premium-vector/faqs-concept-illustration_86047-992.jpg?w=826" class="object-fit-cover h-100 w-100">
+    </div>
     </div>
     <div class="col-lg-8 col-md-7 col-12">
         
@@ -212,12 +293,13 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-          What is your return policy?
+          What is the Administrative Module? 
         </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          We offer a 30-day return policy on all items. Just make sure the product is in original condition.
+          The administrative module is designed for a hospital owner or the person accountable for operating the entire hospital smoothly. Using this module, you can manage the entire system easily and efficiently.
+          It includes every important feature like doctors portal, patient portal, appointment scheduling, prescription management, human resource management, bed management, employee management, accounts, software settings, and role assigning.
         </div>
       </div>
     </div>
@@ -225,12 +307,12 @@
     <div class="accordion-item mt-3">
       <h2 class="accordion-header" id="headingTwo">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-          How can I track my order?
+          What is the Doctor Module?
         </button>
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          Once your order ships, we’ll email you a tracking number and a link to track your shipment.
+          The Doctor Module is included because a doctor is the most important person to ensure the health condition of any patient. Using this module, doctors can access all important functions that belong to them. This allows them to maintain patient portals, appointment scheduling & maintaining, prescription making, and any other things that are related to hospital activities.
         </div>
       </div>
     </div>
@@ -238,36 +320,36 @@
     <div class="accordion-item mt-3">
       <h2 class="accordion-header" id="headingThree">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-          Do you offer international shipping?
+          What is the Accountants Module? 
         </button>
       </h2>
       <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          Yes, we ship to over 50 countries worldwide. Shipping fees vary by location.
+        The software with this module helps to provide a complete clinic management system that is understandable to both technical or non-technical people.
         </div>
       </div>
     </div>
     <div class="accordion-item mt-3">
         <h2 class="accordion-header" id="headingFour">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-           CRM software, and how can it benefit my business?		
+         How long do I get support?
           </button>
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Yes, we ship to over 50 countries worldwide. Shipping fees vary by location.
+          If you have an active software license, then you will have access to software support. The source also mentions this is totally open-source software.
           </div>
         </div>
       </div>
       <div class="accordion-item mt-3">
         <h2 class="accordion-header" id="headingFive">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-            Do you offer international shipping?
+           Is the software customizable? 
           </button>
         </h2>
         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Yes, we ship to over 50 countries worldwide. Shipping fees vary by location.
+            Yes, this software is 100% customizable. The provider is prepared to customize it based on your specific business requirements. They also highlight "Customization Facilities".
           </div>
         </div>
       </div>
@@ -277,7 +359,106 @@
 </div>
 </div></div>
 
-    <!-- Testimonials Section -->
+  <section class="contact-section px-lg-4">
+        <div class="container-fluid py-3 px-lg-5 px-4">
+            <div class="row align-items-center justify-content-end position-relative">
+                <div class="col-lg-10 border-2 p-2 shadow rounded-3">
+                    <div class="row">
+                        <div class="col-4 d-none d-lg-block"></div>
+                        <div class="col-lg-8 col-12">
+                    <div class="">
+                        <div class="card-body p-lg-5">
+                            <h2 class="text-center mb-4">Send Us a Message</h2>
+                            <form id="contactForm" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your first name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your last name.
+                                        </div>
+                                    </div>
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                 </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="" selected disabled>Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="sales">Sales Question</option>
+                                        <option value="feedback">Feedback</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a subject.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please enter your message.
+                                    </div>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="subscribe">
+                                    <label class="form-check-label" for="subscribe">Subscribe to our newsletter</label>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn-01">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+ <div class="col-lg-5 position-absolute-lg card-left mt-lg-0 mt-4 ">
+                    <div class="contact-card bg-teal text-white rounded-3">
+                        <h2 class="section-title"><i class="fa fa-minus" aria-hidden="true"></i> Contact <i class="fa fa-minus" aria-hidden="true"></i></h2>
+                    <h3 class="display-4 mb-4">Get in Touch</h1>
+                    <p class="contect-description mb-4">We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-phone-alt me-3"></i>
+                        <span>+91 8800007740</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-envelope me-3"></i>
+                        <span>info@7d7s.com</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-map-marker-alt me-3"></i>
+                        <span>I, 102, Block N, Kirti Nagar, New Delhi, Delhi, 110015</span>
+                    </div>
+                      <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+    </section>
   
 
   <!-- Footer -->
