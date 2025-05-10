@@ -366,6 +366,9 @@ nav a:hover {
   .hero-title {
     font-size: 2rem;
   }
+  .text-sm{
+    font-size: 1.5rem;
+  }
 .max-w-6xl{
   max-width: 100%;
 }
@@ -991,4 +994,12 @@ nav a:hover {
   .position-absolute-lg {
     position: absolute !important;
   }
+}
+
+
+@media (max-width: 768px) {
+       .review-header h2 {
+        font-size:1.9rem;
+        margin-bottom: 0px;
+}
 }

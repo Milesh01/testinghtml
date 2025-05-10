@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Testimonials</title>
+    <title>Testimonials</title>
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/review.css" />
     <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
@@ -14,7 +14,71 @@
 </head>
 
 <body>
-    <div id="header"></div>
+       <!-- Header -->
+    <header class="header px-md-4 d-flex justify-content-center align-items-center">
+      <div class="container-fluid border-bottom border-secondary shadow-sm py-3 px-md-5 bg-teal">
+          <div class="d-flex justify-content-between align-items-center">
+             <div class="d-flex gap-5">
+              <a href="#" class="logo text-decoration-none fs-4 fw-bold text-white">Medlattice</a>
+              
+              <!-- Desktop Navigation -->
+              <nav class="menu-bar d-none d-lg-flex align-items-center gap-4">
+                  <a href="#" class="text-decoration-none">Home</a>
+                  <a href="about.html" class="text-decoration-none">About</a>
+                  <a href="faq.html" class="text-decoration-none">Faq</a>
+                  <a href="review.html" class="text-decoration-none">Review</a>
+                  <a href="contact-us.html" class="text-decoration-none">Contact</a>
+              </nav>
+             </div>
+             <a href="#" class="btn d-none d-lg-block btn-outline-secondary px-4 py-2 rounded-pill custom-hover">Get Started</a>
+
+              <!-- Mobile Toggle Button -->
+              <button class="menu-toggle d-lg-none p-0 border-0 bg-transparent" id="menuToggle">
+                  <i class="fas fa-bars fs-3"></i>
+              </button>
+          </div>
+      </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu bg-white shadow vh-100 p-4" id="mobileMenu">
+      <div class="d-flex justify-content-between mb-4">
+          <a href="#" class="logo text-decoration-none fs-4 fw-bold text-dark">Medlattice</a>
+          <button class="btn p-0 border-0 bg-transparent close-menu">
+              <i class="fas fa-times fs-3"></i>
+          </button>
+      </div>
+      
+      <div class="d-flex flex-column h-100">
+          <nav class="mb-4">
+              <a href="/" class="d-block py-2 text-decoration-none text-dark">Home</a>
+              <a href="about.html" class="d-block py-2 text-decoration-none text-dark">About</a>
+              <a href="faq.html" class="d-block py-2 text-decoration-none text-dark">Faq</a>
+              <a href="review.html" class="d-block py-2 text-decoration-none text-dark">Review</a>
+              <a href="contact-us.html" class="d-block py-2 text-decoration-none text-dark mb-5">Contact</a>
+          </nav>
+          
+          <div class="mt-auto pt-4 border-top">
+              <h5 class="mb-3">Contact Info</h5>
+              <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>  I, 102, Block N, Kirti Nagar, New Delhi, Delhi, 110015</p>
+              <p class="mb-2"><i class="fas fa-envelope me-2"></i>  info@7d7s.com</p>
+              <p class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Friday, 09am –05pm</p>
+              <p class="mb-3"><i class="fas fa-phone me-2"></i> +91 8800007740</p>
+              
+              <div class="d-flex gap-3">
+                  <a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+  </div>
+
 
     <section class="hero-section px-md-4 d-flex justify-content-md-center align-items-md-center">
         <div class="container-fluid bg-teal pb-5  px-md-5 px-4 rounded-bottom-5" style="padding-top: 60px;">
@@ -214,168 +278,14 @@
     <div id="footer"></div>
 
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/sript.js"></script>
     <script>
-        fetch("/components/header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header").innerHTML = data);
-
         fetch("/components/footer.html")
             .then(res => res.text())
             .then(data => document.getElementById("footer").innerHTML = data);
     </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const track = document.getElementById('testimonialTrack');
-            const slides = document.querySelectorAll('.testimonial-slide');
-            const prevBtn = document.querySelector('.slider-prev');
-            const nextBtn = document.querySelector('.slider-next');
-            const indicatorsContainer = document.getElementById('sliderIndicators');
-
-            let currentIndex = 0;
-            const slideCount = slides.length;
-            let slideWidth = 0;
-            let slidesToShow = window.innerWidth > 992 ? 2 : 1; // Show 2 on desktop, 1 on mobile
-            let autoSlideInterval;
-
-            // Create indicators based on visible slides
-            function createIndicators() {
-                indicatorsContainer.innerHTML = '';
-                const indicatorCount = Math.ceil(slideCount / slidesToShow);
-
-                for (let i = 0; i < indicatorCount; i++) {
-                    const indicator = document.createElement('div');
-                    indicator.classList.add('slider-indicator');
-                    if (i === Math.floor(currentIndex / slidesToShow)) {
-                        indicator.classList.add('active');
-                    }
-                    indicator.addEventListener('click', () => {
-                        goToSlide(i * slidesToShow);
-                    });
-                    indicatorsContainer.appendChild(indicator);
-                }
-            }
-
-            // Initialize slider
-            function initSlider() {
-                // Update slides to show based on screen size
-                slidesToShow = window.innerWidth > 992 ? 2 : 1;
-
-                // Calculate slide width based on number to show
-                slideWidth = track.clientWidth / slidesToShow;
-
-                // Set slide widths
-                slides.forEach(slide => {
-                    slide.style.minWidth = `${slideWidth}px`;
-                });
-
-                updateSliderPosition();
-                createIndicators();
-                startAutoSlide();
-            }
-
-            // Update slider position
-            function updateSliderPosition() {
-                const offset = -currentIndex * slideWidth;
-                track.style.transform = `translateX(${offset}px)`;
-
-                // Update active indicator
-                const activeIndicatorIndex = Math.floor(currentIndex / slidesToShow);
-                document.querySelectorAll('.slider-indicator').forEach((indicator, index) => {
-                    indicator.classList.toggle('active', index === activeIndicatorIndex);
-                });
-            }
-
-            // Go to specific slide
-            function goToSlide(index) {
-                // Ensure we don't go past the last slide
-                if (index > slideCount - slidesToShow) {
-                    index = slideCount - slidesToShow;
-                }
-                if (index < 0) {
-                    index = 0;
-                }
-
-                currentIndex = index;
-                updateSliderPosition();
-                resetAutoSlide();
-            }
-
-            // Next slide
-            function nextSlide() {
-                if (currentIndex < slideCount - slidesToShow) {
-                    currentIndex += 1;
-                } else {
-                    currentIndex = 0; // Loop back to start
-                }
-                updateSliderPosition();
-                resetAutoSlide();
-            }
-
-            // Previous slide
-            function prevSlide() {
-                if (currentIndex > 0) {
-                    currentIndex -= 1;
-                } else {
-                    // If at start, go to last possible position
-                    currentIndex = slideCount - slidesToShow;
-                }
-                updateSliderPosition();
-                resetAutoSlide();
-            }
-
-            // Auto slide
-            function startAutoSlide() {
-                autoSlideInterval = setInterval(nextSlide, 5000);
-            }
-
-            function resetAutoSlide() {
-                clearInterval(autoSlideInterval);
-                startAutoSlide();
-            }
-
-            // Event listeners
-            prevBtn.addEventListener('click', prevSlide);
-            nextBtn.addEventListener('click', nextSlide);
-
-            // Pause on hover
-            track.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-            track.addEventListener('mouseleave', startAutoSlide);
-
-            // Handle window resize with debounce
-            let resizeTimeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(initSlider, 250);
-            });
-
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') prevSlide();
-                if (e.key === 'ArrowRight') nextSlide();
-            });
-
-            // Initialize
-            initSlider();
-
-            // Add intersection observer for animations
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.animate-in').forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
+ 
 </body>
 
 </html>

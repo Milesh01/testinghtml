@@ -10,7 +10,71 @@
 
 </head>
 <body>
-<div id="header"></div>
+    <!-- Header -->
+    <header class="header px-md-4 d-flex justify-content-center align-items-center">
+      <div class="container-fluid border-bottom border-secondary shadow-sm py-3 px-md-5 bg-teal">
+          <div class="d-flex justify-content-between align-items-center">
+             <div class="d-flex gap-5">
+              <a href="#" class="logo text-decoration-none fs-4 fw-bold text-white">Medlattice</a>
+              
+              <!-- Desktop Navigation -->
+              <nav class="menu-bar d-none d-lg-flex align-items-center gap-4">
+                  <a href="#" class="text-decoration-none">Home</a>
+                  <a href="about.html" class="text-decoration-none">About</a>
+                  <a href="faq.html" class="text-decoration-none">Faq</a>
+                  <a href="review.html" class="text-decoration-none">Review</a>
+                  <a href="contact-us.html" class="text-decoration-none">Contact</a>
+              </nav>
+             </div>
+             <a href="#" class="btn d-none d-lg-block btn-outline-secondary px-4 py-2 rounded-pill custom-hover">Get Started</a>
+
+              <!-- Mobile Toggle Button -->
+              <button class="menu-toggle d-lg-none p-0 border-0 bg-transparent" id="menuToggle">
+                  <i class="fas fa-bars fs-3"></i>
+              </button>
+          </div>
+      </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu bg-white shadow vh-100 p-4" id="mobileMenu">
+      <div class="d-flex justify-content-between mb-4">
+          <a href="#" class="logo text-decoration-none fs-4 fw-bold text-dark">Medlattice</a>
+          <button class="btn p-0 border-0 bg-transparent close-menu">
+              <i class="fas fa-times fs-3"></i>
+          </button>
+      </div>
+      
+      <div class="d-flex flex-column h-100">
+          <nav class="mb-4">
+              <a href="/" class="d-block py-2 text-decoration-none text-dark">Home</a>
+              <a href="about.html" class="d-block py-2 text-decoration-none text-dark">About</a>
+              <a href="faq.html" class="d-block py-2 text-decoration-none text-dark">Faq</a>
+              <a href="review.html" class="d-block py-2 text-decoration-none text-dark">Review</a>
+              <a href="contact-us.html" class="d-block py-2 text-decoration-none text-dark mb-5">Contact</a>
+          </nav>
+          
+          <div class="mt-auto pt-4 border-top">
+              <h5 class="mb-3">Contact Info</h5>
+              <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>  I, 102, Block N, Kirti Nagar, New Delhi, Delhi, 110015</p>
+              <p class="mb-2"><i class="fas fa-envelope me-2"></i>  info@7d7s.com</p>
+              <p class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Friday, 09am –05pm</p>
+              <p class="mb-3"><i class="fas fa-phone me-2"></i> +91 8800007740</p>
+              
+              <div class="d-flex gap-3">
+                  <a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+  </div>
+
 
 <section class="hero-section px-md-4 d-flex justify-content-md-center align-items-md-center">
   <div class="container-fluid bg-teal pb-5  px-md-5 px-4 rounded-bottom-5" style="padding-top: 60px;">
