@@ -273,7 +273,6 @@ nav a:hover {
   text-align: center;
   background: #f0f0f0;
 }
-
 .scroll-prompt {
   margin-top: 20px;
   font-size: 1rem;
@@ -559,16 +558,7 @@ nav a:hover {
   /* font-size: 14px; */
 }
 
-@media (max-width: 768px) {
-  .footer-col {
-      margin-bottom: 30px;
-  }
-}
-
 /* =======Operation====== */
-.operations-section {
-    /* padding: 100px 0; */
-}
 
 .bg-gray-3{
   background-color: #f8f9fa;
@@ -582,12 +572,6 @@ nav a:hover {
     font-size: 1rem;
     color: var(--dark-green);
     margin-bottom: 15px;
-}
-
-.section-subtitle {
-    font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 20px;
 }
 
 .section-description {
@@ -646,24 +630,12 @@ nav a:hover {
     transform: translateX(5px);
 }
 
-@media (max-width: 768px) {    
-    .operations-section {
-        padding: 60px 0;
-    }
-    
-    .feature-card {
-        margin-bottom: 30px;
-    }
-}
-
-
 /* =====Pricing Plans========= */
 .pricing-section {
     padding: 50px 0;
     /* background-color: #f8f9fa; */
 }
 .pricing-card{
-  margin-top: 30px;
   border-radius: 32px;
   transition: all 0.4s ease-in-out;
   position: relative;
@@ -788,7 +760,7 @@ nav a:hover {
 @media (max-width: 768px) {
     
     .pricing-section {
-        padding: 60px 0;
+        padding: 50px 0 0 0;
     }
     
     .pricing-card {
@@ -837,16 +809,11 @@ nav a:hover {
   background-color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .faq-header h2 {
-    font-size: 1.8rem;
-  }
-}
 
 
 /* =======Contact======== */
 .contact-section{
-  padding: 50px 0;
+  padding: 0 0 0;
 }
 .contect-description{
     font-size: 1.1rem;
@@ -924,8 +891,7 @@ nav a:hover {
       color: #fff;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
-      /* margin-left: -80px; */
-      z-index: -1;
+      z-index: 2;
     }
 
     .hex-shape:hover {
@@ -989,17 +955,84 @@ nav a:hover {
 .position-absolute-lg {
   position: static; /* default for mobile */
 }
+.rounded-01{
+  border-radius: 2rem;
+}
+.rounded-bottom-01{
+    border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
 
+.section-subtitle{
+   color: #004d40;
+      font-weight: 600;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+}
+@media (min-width: 1024px) {
+ .shadow-01{
+  box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
+}
+}
 @media (min-width: 992px) {
   .position-absolute-lg {
     position: absolute !important;
   }
+  .shadow-01{
+  box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
+}
 }
 
 
 @media (max-width: 768px) {
        .review-header h2 {
-        font-size:1.9rem;
+        font-size:1.7rem;
         margin-bottom: 0px;
+}
+.rounded-bottom-01{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.rounded-01{
+  border-radius: 0px;
+}
+    .feature-card {
+        margin-bottom: 30px;
+    }
+    .section-subtitle{
+      font-size: 1.7rem;
+    }
+    .stats-section {
+  padding: 0px;
+}
+/* ======Slider====== */
+.testimonial-slider, .testimonial-slide{
+  padding: 0;
+}
+.view-all-btn{
+  padding: 0.55rem 1rem;
+}
+.view-all{
+  margin-top: 2rem;
+}
+/* ====Contact======= */
+.contact-section {
+    padding: 0;
+}
+.shadow-01{
+  box-shadow: none;
+}
+ .faq-header h2 {
+    font-size: 1.8rem;
+  }
+  .footer {
+  padding: 0;
+}
+.footer-heading{
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.shadow{
+  box-shadow: none;
 }
 }
