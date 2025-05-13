@@ -1067,7 +1067,8 @@ z-index: 1;
   width: 100px;
   display: flex;
   justify-content: center;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  border: 2px solid var(--bg-dark-teal);
 }
 .icon-vision i{
   font-size: 1.1rem;
@@ -1166,5 +1167,8 @@ z-index: 1;
 .about-img{
   width: auto;
   height: auto;
+}
+.about-img-01{
+  height: 100%;
 }
 }
