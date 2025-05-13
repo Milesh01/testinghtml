@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
     
 // ========backToTopBtn
-const backToTopBtn = document.getElementById("backToTopBtn");
+ const backToTopBtn = document.getElementById("backToTopBtn");
 
     window.onscroll = function () {
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -348,5 +348,4 @@ const backToTopBtn = document.getElementById("backToTopBtn");
     backToTopBtn.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
 

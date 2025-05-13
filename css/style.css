@@ -7,7 +7,9 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-
+html {
+      scroll-behavior: smooth;
+    }
 
 :root {
   --bg-dark-teal: #08272b;
@@ -902,25 +904,72 @@ z-index: 1;
   z-index: -1;
 }
 
-/* =====Back To HOme ============ */
-#backToTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 90px;
-      right: 30px;
-      z-index: 1000;
-      color: #004d40;
-      border: none;
-      cursor: pointer;
-      font-size: 40px;
-      z-index: 999;
-      background-blend-mode:  overlay;
-    }
+/* =====Back To Home ============ */
 
-    #backToTopBtn:hover {
-      color: var(--dark-green);
-    }
+.backToTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  z-index: 999;
+}
 
+.backToTop .svgIcon {
+  width: 15px;
+  transition-duration: 0.3s;
+}
+
+.backToTop .svgIcon path {
+  fill: white;
+}
+
+.backToTop:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: var(--dark-green);
+  align-items: center;
+}
+
+.backToTop:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-250%);
+}
+
+.backToTop::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 0px;
+}
+
+.backToTop:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: 13px;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+    
 
 
 /* =======ChatBox============ */
