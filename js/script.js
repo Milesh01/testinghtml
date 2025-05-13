@@ -52,6 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         document.getElementById("mission").innerHTML = data;
       });
+
+          fetch("components/chatbox.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("chatbox").innerHTML = data;
+      });
   });
   
 // ====Header=====
@@ -176,4 +182,171 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", animateOnScroll);
   window.addEventListener("scroll", animateOnScroll);
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.getElementById("testimonialTrack");
+  const slides = document.querySelectorAll(".testimonial-slide");
+  const prevBtn = document.querySelector(".slider-prev");
+  const nextBtn = document.querySelector(".slider-next");
+  const indicatorsContainer = document.getElementById("sliderIndicators");
+
+  let currentIndex = 0;
+  const slideCount = slides.length;
+  let slideWidth = 0;
+  let slidesToShow = window.innerWidth > 992 ? 2 : 1; // Show 2 on desktop, 1 on mobile
+  let autoSlideInterval;
+
+  // Create indicators based on visible slides
+  function createIndicators() {
+    indicatorsContainer.innerHTML = "";
+    const indicatorCount = Math.ceil(slideCount / slidesToShow);
+
+    for (let i = 0; i < indicatorCount; i++) {
+      const indicator = document.createElement("div");
+      indicator.classList.add("slider-indicator");
+      if (i === Math.floor(currentIndex / slidesToShow)) {
+        indicator.classList.add("active");
+      }
+      indicator.addEventListener("click", () => {
+        goToSlide(i * slidesToShow);
+      });
+      indicatorsContainer.appendChild(indicator);
+    }
+  }
+
+  function initSlider() {
+    slidesToShow = window.innerWidth > 992 ? 2 : 1;
+
+    slideWidth = track.clientWidth / slidesToShow;
+
+    slides.forEach((slide) => {
+      slide.style.minWidth = `${slideWidth}px`;
+    });
+
+    updateSliderPosition();
+    createIndicators();
+    startAutoSlide();
+  }
+
+  // Update slider position
+  function updateSliderPosition() {
+    const offset = -currentIndex * slideWidth;
+    track.style.transform = `translateX(${offset}px)`;
+
+    // Update active indicator
+    const activeIndicatorIndex = Math.floor(currentIndex / slidesToShow);
+    document
+      .querySelectorAll(".slider-indicator")
+      .forEach((indicator, index) => {
+        indicator.classList.toggle("active", index === activeIndicatorIndex);
+      });
+  }
+
+  // Go to specific slide
+  function goToSlide(index) {
+    // Ensure we don't go past the last slide
+    if (index > slideCount - slidesToShow) {
+      index = slideCount - slidesToShow;
+    }
+    if (index < 0) {
+      index = 0;
+    }
+
+    currentIndex = index;
+    updateSliderPosition();
+    resetAutoSlide();
+  }
+
+  // Next slide
+  function nextSlide() {
+    if (currentIndex < slideCount - slidesToShow) {
+      currentIndex += 1;
+    } else {
+      currentIndex = 0; // Loop back to start
+    }
+    updateSliderPosition();
+    resetAutoSlide();
+  }
+
+  // Previous slide
+  function prevSlide() {
+    if (currentIndex > 0) {
+      currentIndex -= 1;
+    } else {
+      // If at start, go to last possible position
+      currentIndex = slideCount - slidesToShow;
+    }
+    updateSliderPosition();
+    resetAutoSlide();
+  }
+
+  // Auto slide
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 5000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+
+  // Event listeners
+  prevBtn.addEventListener("click", prevSlide);
+  nextBtn.addEventListener("click", nextSlide);
+
+  // Pause on hover
+  track.addEventListener("mouseenter", () => clearInterval(autoSlideInterval));
+  track.addEventListener("mouseleave", startAutoSlide);
+
+  // Handle window resize with debounce
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(initSlider, 250);
+  });
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") prevSlide();
+    if (e.key === "ArrowRight") nextSlide();
+  });
+
+  // Initialize
+  initSlider();
+
+  // Add intersection observer for animations
+  const observerOptions = {
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-in");
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".animate-in").forEach((element) => {
+    observer.observe(element);
+  });
+});
+    
+// ========backToTopBtn
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
 
