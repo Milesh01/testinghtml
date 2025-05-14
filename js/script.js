@@ -79,13 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
           
           // Change icon
           if (mobileMenu.classList.contains('active')) {
-              menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+              menuToggle.innerHTML = '<i class="text-primary fas fa-times"></i>';
           } else {
-              menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+              menuToggle.innerHTML = '<i class="text-danger fas fa-bars"></i>';
           }
       });
-
-
+// ..
       overlay.addEventListener('click', function() {
           mobileMenu.classList.remove('active');
           overlay.classList.remove('active');
@@ -126,8 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-
-  // Toggle switch functionality with price calculation
+// ======Price Change==============
    document.addEventListener('DOMContentLoaded', function() {
     const toggleOptions = document.querySelectorAll('.toggle-option');
     const planPrices = document.querySelectorAll('.plan-price');
@@ -349,3 +347,8 @@ document.addEventListener("DOMContentLoaded", function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+// ========ChatBox========
+  function toggleChat() {
+    const chatBox = document.getElementById('chatBox');
+    chatBox.classList.toggle('show-chatbox');
+  }

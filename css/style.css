@@ -190,11 +190,11 @@ nav a:hover {
   top: 0;
   right: -100%;
   width: 320px;
-  height: 100vh;
+  height: 100%;
   background: white;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   transition: right 0.4s ease;
-  z-index: 100;
+  z-index: 9999;
   padding: 80px 30px 30px;
   overflow-y: auto;
 }
@@ -990,12 +990,11 @@ a.contact-btn:hover {
   font-size: 1.5rem;
 }
 
-.feature-title {
+/* .feature-title {
   font-weight: 600;
-  color: var(--dark-color);
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
-}
+} */
 
 .feature-text {
   color: #6c757d;
@@ -1051,13 +1050,12 @@ a.contact-btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
   position: fixed;
-  right: 20px;
-  bottom: 50px;
+  right: 30px;
+  bottom: 100px;
   z-index: 999;
 }
 
@@ -1079,14 +1077,13 @@ a.contact-btn:hover {
 }
 
 .backToTop:hover .svgIcon {
-  /* width: 20px; */
   transition-duration: 0.3s;
   transform: translateY(-250%);
 }
 
 .backToTop::before {
   position: absolute;
-  bottom: -20px;
+  bottom: 15px;
   content: "Back to Top";
   color: white;
   display: flex;

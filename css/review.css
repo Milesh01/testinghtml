@@ -149,7 +149,7 @@
 .slider-nav {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) !important;
     width: 50px;
     height: 50px;
     background: white;
@@ -240,9 +240,11 @@
     }
     
     .testimonial-slider {
-        padding: 0 1rem;
+        padding: 0 .05rem;
     }
-    
+    .testimonial-slide {
+    padding: 0;}
+
     .slider-nav {
         width: 40px;
         height: 40px;
@@ -253,10 +255,6 @@
     .max-w-3xl{
     max-width: 100%;
 }
-    .section-title {
-        font-size: 2rem;
-    }
-
     .section-subtitle {
         font-size: 1.1rem;
     }
