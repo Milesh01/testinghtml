@@ -67,23 +67,41 @@ document.addEventListener("DOMContentLoaded", () => {
       const mobileMenu = document.getElementById('mobileMenu');
       const overlay = document.getElementById('overlay');
       let lastScrollY = window.scrollY;
-      const threshold = 50; // When to start the effect
+      const threshold = 50;
       let isFixed = false;
       let isSticky = false;
 
       // Toggle mobile menu
-      menuToggle.addEventListener('click', function() {
-          mobileMenu.classList.toggle('active');
-          overlay.classList.toggle('active');
-          document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-          
-          // Change icon
-          if (mobileMenu.classList.contains('active')) {
-              menuToggle.innerHTML = '<i class="text-primary fas fa-times"></i>';
-          } else {
-              menuToggle.innerHTML = '<i class="text-danger fas fa-bars"></i>';
-          }
-      });
+      if (menuToggle && mobileMenu && overlay) {
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+        
+        // Change icon
+        if (mobileMenu.classList.contains('active')) {
+            menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+    });
+    
+    const closeMenu = document.querySelector('.close-menu');
+    if (closeMenu) {
+        closeMenu.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    }
+} else {
+    console.error("One or more required elements not found");
+    if (!menuToggle) console.error("menuToggle element not found");
+    if (!mobileMenu) console.error("mobileMenu element not found");
+    if (!overlay) console.error("overlay element not found");
+}
+
 // ..
       overlay.addEventListener('click', function() {
           mobileMenu.classList.remove('active');
